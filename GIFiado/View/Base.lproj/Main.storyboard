@@ -14,14 +14,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Escolha um País!" id="Snh-tT-F41">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HolidayCell" textLabel="XMa-iW-cpV" detailTextLabel="stQ-Xn-p8o" style="IBUITableViewCellStyleSubtitle" id="gXm-XA-I1t">
-                                <rect key="frame" x="0.0" y="72" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXm-XA-I1t" id="Yy5-Cj-E8G">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
@@ -51,9 +46,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Escolha um Feriado" id="hhu-Xa-Q5y"/>
-                    <connections>
-                        <outlet property="searchBar" destination="Snh-tT-F41" id="a10-1a-081"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhB-jq-2cS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
