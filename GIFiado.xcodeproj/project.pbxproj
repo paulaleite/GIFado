@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0F745D2448CA3E00F842B9 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F745C2448CA3E00F842B9 /* Holiday.swift */; };
 		1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */; };
 		1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0B244784620080BBEF /* AppDelegate.swift */; };
 		1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0D244784620080BBEF /* SceneDelegate.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E0F745C2448CA3E00F842B9 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysTVC.swift; sourceTree = "<group>"; };
 		1E65AC08244784620080BBEF /* GIFiado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFiado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65AC0B244784620080BBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */,
+				1E0F745C2448CA3E00F842B9 /* Holiday.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */,
 				1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */,
+				1E0F745D2448CA3E00F842B9 /* Holiday.swift in Sources */,
 				1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

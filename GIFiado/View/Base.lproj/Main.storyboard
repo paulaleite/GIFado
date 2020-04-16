@@ -9,7 +9,7 @@
         <!--Escolha um Feriado-->
         <scene sceneID="wG7-GB-4LH">
             <objects>
-                <tableViewController id="T5O-cZ-QIV" customClass="HolidaysTVC" customModule="GIFiado" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="T5O-cZ-QIV" customClass="HolidaysTVC" customModule="GIFiado" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v7l-rb-YWI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="XMa-iW-cpV" detailTextLabel="stQ-Xn-p8o" style="IBUITableViewCellStyleSubtitle" id="gXm-XA-I1t">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HolidayCell" textLabel="XMa-iW-cpV" detailTextLabel="stQ-Xn-p8o" style="IBUITableViewCellStyleSubtitle" id="gXm-XA-I1t">
                                 <rect key="frame" x="0.0" y="72" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXm-XA-I1t" id="Yy5-Cj-E8G">
@@ -51,6 +51,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Escolha um Feriado" id="hhu-Xa-Q5y"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Snh-tT-F41" id="a10-1a-081"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhB-jq-2cS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
