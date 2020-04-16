@@ -10,11 +10,21 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
+    @IBOutlet weak var calendarCV: UICollectionView!
+    
+    @IBOutlet weak var monthLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
+    @IBAction func nextMonth(_ sender: Any) {
+    }
+    
+    @IBAction func monthBefore(_ sender: Any) {
+    }
+    
 }
 

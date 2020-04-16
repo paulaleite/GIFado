@@ -40,10 +40,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fL9-vi-aoh">
                                         <rect key="frame" x="270" y="8" width="56" height="30"/>
                                         <state key="normal" title="Próximo"/>
+                                        <connections>
+                                            <action selector="nextMonth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O8n-bW-MRh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plt-Me-pes">
                                         <rect key="frame" x="8" y="8" width="55" height="30"/>
                                         <state key="normal" title="Anterior"/>
+                                        <connections>
+                                            <action selector="monthBefore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uWI-cf-QcQ"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ciI-QR-5Qy">
                                         <rect key="frame" x="22" y="63" width="291" height="21"/>
@@ -155,6 +161,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="calendarCV" destination="zgM-z1-lfb" id="OAp-t8-PuK"/>
+                        <outlet property="monthLabel" destination="IzX-sq-cct" id="qD8-kp-sle"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
