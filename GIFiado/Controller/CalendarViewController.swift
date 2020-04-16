@@ -32,16 +32,16 @@ class CalendarViewController: UIViewController {
     
     var positionIndex = 0
     
-    var delegate = CalendarDelegate()
-    var dataSource = CalendarDataSource()
+//    var delegate = CalendarDelegate()
+//    var dataSource = CalendarDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        calendarCV.delegate = delegate
-        calendarCV.dataSource = dataSource
+//        calendarCV.delegate = delegate
+//        calendarCV.dataSource = dataSource
         
-        
+//        currentMonth = months[month - 1]
     }
     
     

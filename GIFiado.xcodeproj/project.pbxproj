@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E3DAA2A2448A9A600D139D5 /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA292448A9A600D139D5 /* CalendarDataSource.swift */; };
 		1E3DAA2C2448A9B300D139D5 /* CalendarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA2B2448A9B300D139D5 /* CalendarDelegate.swift */; };
+		1E3DAA2E2448AC8900D139D5 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA2D2448AC8900D139D5 /* CalendarVars.swift */; };
+		1E3DAA302448AD6F00D139D5 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA2F2448AD6F00D139D5 /* DateCollectionViewCell.swift */; };
 		1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0B244784620080BBEF /* AppDelegate.swift */; };
 		1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0D244784620080BBEF /* SceneDelegate.swift */; };
 		1E65AC10244784620080BBEF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0F244784620080BBEF /* CalendarViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		1E3DAA292448A9A600D139D5 /* CalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
 		1E3DAA2B2448A9B300D139D5 /* CalendarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDelegate.swift; sourceTree = "<group>"; };
+		1E3DAA2D2448AC8900D139D5 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
+		1E3DAA2F2448AD6F00D139D5 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		1E65AC08244784620080BBEF /* GIFiado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFiado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65AC0B244784620080BBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E65AC0D244784620080BBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 				1E65AC0D244784620080BBEF /* SceneDelegate.swift */,
 				1E3DAA292448A9A600D139D5 /* CalendarDataSource.swift */,
 				1E3DAA2B2448A9B300D139D5 /* CalendarDelegate.swift */,
+				1E3DAA2D2448AC8900D139D5 /* CalendarVars.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -58,6 +63,7 @@
 				1E65AC11244784620080BBEF /* Main.storyboard */,
 				1E65AC16244784640080BBEF /* LaunchScreen.storyboard */,
 				1E65AC14244784640080BBEF /* Assets.xcassets */,
+				1E3DAA2F2448AD6F00D139D5 /* DateCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,8 +177,10 @@
 				1E3DAA2A2448A9A600D139D5 /* CalendarDataSource.swift in Sources */,
 				1E3DAA2C2448A9B300D139D5 /* CalendarDelegate.swift in Sources */,
 				1E65AC10244784620080BBEF /* CalendarViewController.swift in Sources */,
+				1E3DAA2E2448AC8900D139D5 /* CalendarVars.swift in Sources */,
 				1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */,
 				1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */,
+				1E3DAA302448AD6F00D139D5 /* DateCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
