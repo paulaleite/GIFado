@@ -32,8 +32,15 @@ class CalendarViewController: UIViewController {
     
     var positionIndex = 0
     
+    var delegate = CalendarDelegate()
+    var dataSource = CalendarDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calendarCV.delegate = delegate
+        calendarCV.dataSource = dataSource
+        
         
     }
     
