@@ -59,5 +59,18 @@ class HolidaysTVC: UITableViewController {
         return 140
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //performSegue(withIdentifier: "showGIF", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? GifVC {
+            guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
+            
+            destination.holiday = listOfHolidays[selectedRow]
+        }
+    }
+    
 
 }
