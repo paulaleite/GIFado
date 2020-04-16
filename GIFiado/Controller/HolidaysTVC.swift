@@ -45,15 +45,19 @@ class HolidaysTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HolidayCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HolidayCell") as! HolidayTVCell
         
         let holiday = listOfHolidays[indexPath.row]
-        cell.textLabel?.text = holiday.name
-        cell.detailTextLabel?.text = holiday.date.iso
+        
+        cell.holidayName.text = holiday.name
+        cell.holidayDate.text = holiday.date.iso
         
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
     
 
 }
