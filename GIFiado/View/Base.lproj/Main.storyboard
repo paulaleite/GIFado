@@ -51,7 +51,7 @@
                                             <action selector="monthBefore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uWI-cf-QcQ"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ciI-QR-5Qy">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ciI-QR-5Qy">
                                         <rect key="frame" x="22" y="63" width="291" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Seg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TP-GW-0Jw">
@@ -146,9 +146,12 @@
                                     <constraint firstItem="Plt-Me-pes" firstAttribute="top" secondItem="QyR-je-3OY" secondAttribute="top" constant="8" id="6fs-Vu-Oj2"/>
                                     <constraint firstItem="IzX-sq-cct" firstAttribute="top" secondItem="QyR-je-3OY" secondAttribute="top" constant="12" id="WQQ-YZ-mXq"/>
                                     <constraint firstItem="fL9-vi-aoh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IzX-sq-cct" secondAttribute="trailing" constant="8" symbolic="YES" id="ZTs-sm-2FG"/>
+                                    <constraint firstAttribute="trailing" secondItem="ciI-QR-5Qy" secondAttribute="trailing" constant="21" id="d6T-ts-nC1"/>
+                                    <constraint firstItem="ciI-QR-5Qy" firstAttribute="top" secondItem="fL9-vi-aoh" secondAttribute="bottom" constant="25" id="gWz-32-v5Y"/>
                                     <constraint firstItem="IzX-sq-cct" firstAttribute="centerX" secondItem="QyR-je-3OY" secondAttribute="centerX" id="vjA-3O-GgG"/>
                                     <constraint firstItem="Plt-Me-pes" firstAttribute="leading" secondItem="QyR-je-3OY" secondAttribute="leading" constant="8" id="wwG-ew-lLO"/>
                                     <constraint firstItem="IzX-sq-cct" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Plt-Me-pes" secondAttribute="trailing" constant="8" symbolic="YES" id="xtt-4h-E97"/>
+                                    <constraint firstItem="ciI-QR-5Qy" firstAttribute="leading" secondItem="QyR-je-3OY" secondAttribute="leading" constant="22" id="zUR-yM-3Z0"/>
                                 </constraints>
                             </view>
                         </subviews>
