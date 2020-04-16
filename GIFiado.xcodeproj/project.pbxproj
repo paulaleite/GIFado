@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0F745D2448CA3E00F842B9 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F745C2448CA3E00F842B9 /* Holiday.swift */; };
+		1E0F745F2448CBB900F842B9 /* HolidayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F745E2448CBB900F842B9 /* HolidayRequest.swift */; };
+		1E0F74622448D5E600F842B9 /* HolidayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */; };
+		1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */; };
 		1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0B244784620080BBEF /* AppDelegate.swift */; };
 		1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0D244784620080BBEF /* SceneDelegate.swift */; };
 		1E65AC13244784620080BBEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E65AC11244784620080BBEF /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E0F745C2448CA3E00F842B9 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		1E0F745E2448CBB900F842B9 /* HolidayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayRequest.swift; sourceTree = "<group>"; };
+		1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayTVCell.swift; sourceTree = "<group>"; };
+		1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysTVC.swift; sourceTree = "<group>"; };
 		1E65AC08244784620080BBEF /* GIFiado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFiado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65AC0B244784620080BBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E65AC0D244784620080BBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +43,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E0F74602448D51700F842B9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				1E0F745C2448CA3E00F842B9 /* Holiday.swift */,
+				1E0F745E2448CBB900F842B9 /* HolidayRequest.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		1E3DAA332448C6C600D139D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1E3DAA342448C6CE00D139D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E65AC0B244784620080BBEF /* AppDelegate.swift */,
+				1E65AC0D244784620080BBEF /* SceneDelegate.swift */,
+				1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1E3DAA352448C6D500D139D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E65AC11244784620080BBEF /* Main.storyboard */,
+				1E65AC16244784640080BBEF /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1E65ABFF244784620080BBEF = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +98,11 @@
 		1E65AC0A244784620080BBEF /* GIFiado */ = {
 			isa = PBXGroup;
 			children = (
-				1E65AC0B244784620080BBEF /* AppDelegate.swift */,
-				1E65AC0D244784620080BBEF /* SceneDelegate.swift */,
-				1E65AC11244784620080BBEF /* Main.storyboard */,
+				1E0F74602448D51700F842B9 /* JSON */,
+				1E3DAA342448C6CE00D139D5 /* Model */,
+				1E3DAA352448C6D500D139D5 /* View */,
+				1E3DAA332448C6C600D139D5 /* Controller */,
 				1E65AC14244784640080BBEF /* Assets.xcassets */,
-				1E65AC16244784640080BBEF /* LaunchScreen.storyboard */,
 				1E65AC19244784640080BBEF /* Info.plist */,
 			);
 			path = GIFiado;
@@ -135,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0F74622448D5E600F842B9 /* HolidayTVCell.swift in Sources */,
 				1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */,
+				1E0F745F2448CBB900F842B9 /* HolidayRequest.swift in Sources */,
+				1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */,
+				1E0F745D2448CA3E00F842B9 /* Holiday.swift in Sources */,
 				1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
