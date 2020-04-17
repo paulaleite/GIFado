@@ -116,7 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Titulo" id="ZPu-Cz-Vrm"/>
                     <connections>
-                        <outlet property="gitImageView" destination="OFt-86-Mp8" id="v25-Sx-em9"/>
+                        <outlet property="gifImageView" destination="OFt-86-Mp8" id="L2I-Os-njK"/>
                         <outlet property="viewControllerTitle" destination="ZPu-Cz-Vrm" id="v07-cx-O96"/>
                     </connections>
                 </viewController>
