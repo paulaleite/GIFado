@@ -8,36 +8,20 @@
 
 import Foundation
 
-var holidayName: GifVC?
-
-func accessNameOfHoliday() -> String {
-    
-    guard let gifSearch = holidayName?.holiday?.name else { return "Error with name."}
-    
-    return gifSearch
-}
-
 enum GIFError: Error {
     case noDataAvailable
     case cannotProcessData
 }
 
 struct GIFRequest {
-    let resourceURL: URL
     let API_KEY = "vN1Mf9zlf6Nle07kQYhr8alZMNm01c8A"
     
-    init() {
-        let gifSearchName = accessNameOfHoliday()
+    func getGifs(holidayName: String, completion: @escaping(Result<String, GIFError>) -> Void) {
+        
+        let resourceString = "https://api.giphy.com/v1/gifs/search?api_key=\(API_KEY)&q=banana&limit=1&offset=0&rating=G&lang=en"
+        guard let resourceURL = URL(string: resourceString) else { fatalError() }
         
         
-        let resoureString = "https://api.giphy.com/v1/gifs/search?api_key=\(API_KEY)&q=\(gifSearchName)&limit=1&offset=0&rating=G&lang=en"
-        guard let resourseURL = URL(string: resoureString) else { fatalError() }
-        
-        self.resourceURL = resourseURL
-        
-    }
-    
-    func getGifs(completion: @escaping(Result<OriginalInfo, GIFError>) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: resourceURL) {data, _, _ in
             guard let jsonData = data else {
                 completion(.failure(.noDataAvailable))
@@ -46,8 +30,8 @@ struct GIFRequest {
             
             do {
                 let decoder = JSONDecoder()
-                let gifResponse = try decoder.decode(GIFData.self, from: jsonData)
-                let gifImage = gifResponse.images.original
+                let gifResponse = try decoder.decode(FixedHeight.self, from: jsonData)
+                guard let gifImage = gifResponse.mp4 else { return print("Error with image.")}
                 completion(.success(gifImage))
             } catch {
                 completion(.failure(.cannotProcessData))

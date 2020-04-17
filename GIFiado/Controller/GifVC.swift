@@ -34,9 +34,9 @@ class GifVC: UIViewController {
 //            }
 //        }
         
-//        gifRequest.getGifs { (result) in
-//            print(result)
-//        }
+        gifRequest.getGifs(holidayName: safeHoliday) { (result) in
+            print(result)
+        }
         
 //        gifImageView.loadGif(name: "test.mp4")
         
