@@ -37,7 +37,7 @@ struct GIFRequest {
         
     }
     
-    func getGifs(completion: @escaping(Result<[GIFImage], GIFError>) -> Void) {
+    func getGifs(completion: @escaping(Result<OriginalInfo, GIFError>) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: resourceURL) {data, _, _ in
             guard let jsonData = data else {
                 completion(.failure(.noDataAvailable))
@@ -47,8 +47,8 @@ struct GIFRequest {
             do {
                 let decoder = JSONDecoder()
                 let gifResponse = try decoder.decode(GIFData.self, from: jsonData)
-                let gifImage = gifResponse.images
-                completion(.success(gifImage[0]))
+                let gifImage = gifResponse.images.original
+                completion(.success(gifImage))
             } catch {
                 completion(.failure(.cannotProcessData))
             }

@@ -95,6 +95,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" red="0.41176470588235292" green="0.59215686274509804" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="shareGifButton:" destination="Ln4-v7-CeW" eventType="touchUpInside" id="GyY-26-vQL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
