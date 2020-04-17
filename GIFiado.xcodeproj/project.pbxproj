@@ -11,6 +11,7 @@
 		1E0F745F2448CBB900F842B9 /* HolidayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F745E2448CBB900F842B9 /* HolidayRequest.swift */; };
 		1E0F74622448D5E600F842B9 /* HolidayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */; };
 		1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */; };
+		1E4643592449EF4600872436 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4643582449EF4600872436 /* Swift+Gif.swift */; };
 		1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0B244784620080BBEF /* AppDelegate.swift */; };
 		1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0D244784620080BBEF /* SceneDelegate.swift */; };
 		1E65AC13244784620080BBEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E65AC11244784620080BBEF /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		1E0F745E2448CBB900F842B9 /* HolidayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayRequest.swift; sourceTree = "<group>"; };
 		1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayTVCell.swift; sourceTree = "<group>"; };
 		1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysTVC.swift; sourceTree = "<group>"; };
+		1E4643582449EF4600872436 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
 		1E65AC08244784620080BBEF /* GIFiado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFiado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65AC0B244784620080BBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E65AC0D244784620080BBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				1E65AC0B244784620080BBEF /* AppDelegate.swift */,
 				1E65AC0D244784620080BBEF /* SceneDelegate.swift */,
 				1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */,
+				1E4643582449EF4600872436 /* Swift+Gif.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				1EB336D52448E95C0090BB3D /* CustomShareButton.swift in Sources */,
 				1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */,
 				1EB336D72448F2AB0090BB3D /* GIFRequest.swift in Sources */,
+				1E4643592449EF4600872436 /* Swift+Gif.swift in Sources */,
 				1E0F745D2448CA3E00F842B9 /* Holiday.swift in Sources */,
 				1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */,
 			);
