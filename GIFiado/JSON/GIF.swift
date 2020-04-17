@@ -9,7 +9,7 @@
 import Foundation
 
 struct GIFResponse: Decodable {
-    var response: [GIFData]
+    var data: [GIFData]
 }
 
 struct GIFData: Decodable {
@@ -21,5 +21,5 @@ struct GIFImage: Decodable {
 }
 
 struct OriginalInfo: Decodable {
-    var url: String
+    var mp4: String
 }

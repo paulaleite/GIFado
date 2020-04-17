@@ -12,6 +12,9 @@
 		1E0F74622448D5E600F842B9 /* HolidayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */; };
 		1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */; };
 		1E4643592449EF4600872436 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4643582449EF4600872436 /* Swift+Gif.swift */; };
+		1E4643622449FA3100872436 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4643612449FA3100872436 /* ShareViewController.swift */; };
+		1E4643652449FA3100872436 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4643632449FA3100872436 /* MainInterface.storyboard */; };
+		1E4643692449FA3100872436 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E46435F2449FA3100872436 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1E65AC0C244784620080BBEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0B244784620080BBEF /* AppDelegate.swift */; };
 		1E65AC0E244784620080BBEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65AC0D244784620080BBEF /* SceneDelegate.swift */; };
 		1E65AC13244784620080BBEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E65AC11244784620080BBEF /* Main.storyboard */; };
@@ -23,12 +26,40 @@
 		1EB336D92448F38A0090BB3D /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB336D82448F38A0090BB3D /* GIF.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1E4643672449FA3100872436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E65AC00244784620080BBEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E46435E2449FA3100872436;
+			remoteInfo = ShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E46436D2449FA3100872436 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E4643692449FA3100872436 /* ShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1E0F745C2448CA3E00F842B9 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		1E0F745E2448CBB900F842B9 /* HolidayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayRequest.swift; sourceTree = "<group>"; };
 		1E0F74612448D5E600F842B9 /* HolidayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayTVCell.swift; sourceTree = "<group>"; };
 		1E3DAA312448C6C200D139D5 /* HolidaysTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysTVC.swift; sourceTree = "<group>"; };
 		1E4643582449EF4600872436 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
+		1E46435F2449FA3100872436 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E4643612449FA3100872436 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1E4643642449FA3100872436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1E4643662449FA3100872436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E65AC08244784620080BBEF /* GIFiado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFiado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65AC0B244784620080BBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E65AC0D244784620080BBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +74,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E46435C2449FA3100872436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E65AC05244784620080BBEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				1E0F745C2448CA3E00F842B9 /* Holiday.swift */,
-				1EB336D82448F38A0090BB3D /* GIF.swift */,
 				1E0F745E2448CBB900F842B9 /* HolidayRequest.swift */,
+				1EB336D82448F38A0090BB3D /* GIF.swift */,
 				1EB336D62448F2AB0090BB3D /* GIFRequest.swift */,
 			);
 			path = JSON;
@@ -95,10 +133,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1E4643602449FA3100872436 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1E4643612449FA3100872436 /* ShareViewController.swift */,
+				1E4643632449FA3100872436 /* MainInterface.storyboard */,
+				1E4643662449FA3100872436 /* Info.plist */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
 		1E65ABFF244784620080BBEF = {
 			isa = PBXGroup;
 			children = (
 				1E65AC0A244784620080BBEF /* GIFiado */,
+				1E4643602449FA3100872436 /* ShareExtension */,
 				1E65AC09244784620080BBEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1E65AC08244784620080BBEF /* GIFiado.app */,
+				1E46435F2449FA3100872436 /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +176,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E46435E2449FA3100872436 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E46436A2449FA3100872436 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				1E46435B2449FA3100872436 /* Sources */,
+				1E46435C2449FA3100872436 /* Frameworks */,
+				1E46435D2449FA3100872436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareExtension;
+			productName = ShareExtension;
+			productReference = 1E46435F2449FA3100872436 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1E65AC07244784620080BBEF /* GIFiado */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E65AC1C244784640080BBEF /* Build configuration list for PBXNativeTarget "GIFiado" */;
@@ -133,10 +200,12 @@
 				1E65AC04244784620080BBEF /* Sources */,
 				1E65AC05244784620080BBEF /* Frameworks */,
 				1E65AC06244784620080BBEF /* Resources */,
+				1E46436D2449FA3100872436 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1E4643682449FA3100872436 /* PBXTargetDependency */,
 			);
 			name = GIFiado;
 			productName = GIFiado;
@@ -153,6 +222,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Paula Leite";
 				TargetAttributes = {
+					1E46435E2449FA3100872436 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					1E65AC07244784620080BBEF = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -172,11 +244,20 @@
 			projectRoot = "";
 			targets = (
 				1E65AC07244784620080BBEF /* GIFiado */,
+				1E46435E2449FA3100872436 /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E46435D2449FA3100872436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4643652449FA3100872436 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E65AC06244784620080BBEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +271,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E46435B2449FA3100872436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E4643622449FA3100872436 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E65AC04244784620080BBEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,7 +299,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1E4643682449FA3100872436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E46435E2449FA3100872436 /* ShareExtension */;
+			targetProxy = 1E4643672449FA3100872436 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1E4643632449FA3100872436 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E4643642449FA3100872436 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		1E65AC11244784620080BBEF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -230,6 +335,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E46436B2449FA3100872436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X54K5PJVGU;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ptl.GIFiado.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E46436C2449FA3100872436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X54K5PJVGU;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ptl.GIFiado.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1E65AC1A244784640080BBEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -347,6 +490,7 @@
 		1E65AC1D244784640080BBEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X54K5PJVGU;
@@ -365,6 +509,7 @@
 		1E65AC1E244784640080BBEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X54K5PJVGU;
@@ -383,6 +528,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E46436A2449FA3100872436 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E46436B2449FA3100872436 /* Debug */,
+				1E46436C2449FA3100872436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E65AC03244784620080BBEF /* Build configuration list for PBXProject "GIFiado" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

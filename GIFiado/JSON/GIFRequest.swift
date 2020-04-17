@@ -8,11 +8,11 @@
 
 import Foundation
 
-var holiday: HolidayDetail?
+var holidayName: GifVC?
 
 func accessNameOfHoliday() -> String {
     
-    guard let gifSearch = holiday?.name else { return "Error with name."}
+    guard let gifSearch = holidayName?.holiday?.name else { return "Error with name."}
     
     return gifSearch
 }
@@ -37,7 +37,7 @@ struct GIFRequest {
         
     }
     
-    func getHolidays(completion: @escaping(Result<[HolidayDetail], HolidayError>) -> Void) {
+    func getGifs(completion: @escaping(Result<[GIFImage], GIFError>) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: resourceURL) {data, _, _ in
             guard let jsonData = data else {
                 completion(.failure(.noDataAvailable))
@@ -46,9 +46,9 @@ struct GIFRequest {
             
             do {
                 let decoder = JSONDecoder()
-                let holidayResponse = try decoder.decode(HolidayResponse.self, from: jsonData)
-                let holidayDetails = holidayResponse.response.holidays
-                completion(.success(holidayDetails))
+                let gifResponse = try decoder.decode(GIFData.self, from: jsonData)
+                let gifImage = gifResponse.images
+                completion(.success(gifImage[0]))
             } catch {
                 completion(.failure(.cannotProcessData))
             }
