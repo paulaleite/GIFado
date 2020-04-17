@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class GifVC: UIViewController {
     
@@ -17,6 +18,9 @@ class GifVC: UIViewController {
     @IBOutlet weak var viewControllerTitle: UINavigationItem!
     
     @IBOutlet weak var gifImageView: UIImageView!
+    
+    var player: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +39,32 @@ class GifVC: UIViewController {
 //        }
         
         gifRequest.getGifs(holidayName: safeHoliday) { (result) in
+            
+            
+            player = AVPlayer(url: URL(fileReferenceLiteralResourceName: result, error))
+            self.avPlayerLayer = AVPlayerLayer(player: self.player)
+            self.avPlayerLayer.videoGravity = AVLayerVideoGravity.resize
+
+            self.gifImageView.layer.addSublayer(self.avPlayerLayer)
+            self.player.play()
+            
+            
             print(result)
+        }
+        
+        guard let path = Bundle.main.path(forResource: "Logo-Animation4", ofType:"mp4") else {
+            debugPrint("Logo-Animation4.mp4 not found")
+            return
         }
         
 //        gifImageView.loadGif(name: "test.mp4")
         
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        avPlayerLayer.frame = gifImageView.layer.bounds
+    }
     
     @IBAction func shareGifButton(_ sender: Any) {
         
