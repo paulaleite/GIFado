@@ -30,9 +30,10 @@ struct GIFRequest {
             
             do {
                 let decoder = JSONDecoder()
-                let gifResponse = try decoder.decode(FixedHeight.self, from: jsonData)
-                guard let gifImage = gifResponse.mp4 else { return print("Error with image.")}
-                completion(.success(gifImage))
+                let gifResponse = try decoder.decode(ServerAnswer.self, from: jsonData)
+                //MARK:- GOIS
+                print(gifResponse.datas[0].images.original.mp4)
+                completion(.success(gifResponse.datas[0].images.original.mp4))
             } catch {
                 completion(.failure(.cannotProcessData))
             }

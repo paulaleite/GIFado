@@ -179,3 +179,28 @@ struct Pagination: Codable {
         case count, offset
     }
 }
+
+//MARK:- GOIS
+
+struct ServerAnswer: Codable {
+    let datas: [Datas]
+    private enum CodingKeys: String, CodingKey {
+        case datas = "data"
+    }
+}
+
+struct Datas: Codable {
+    let images: Image
+    private enum CodingKeys: String, CodingKey {
+        case images = "images"
+    }
+}
+
+struct Image: Codable {
+    let original: Original
+}
+
+
+struct Original: Codable {
+    let mp4: String
+}
