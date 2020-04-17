@@ -202,5 +202,5 @@ struct Image: Codable {
 
 
 struct Original: Codable {
-    let mp4: String
+    let url: String
 }

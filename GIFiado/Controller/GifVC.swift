@@ -26,44 +26,36 @@ class GifVC: UIViewController {
         super.viewDidLoad()
         
         guard let safeHoliday = holiday?.name else { return }
+        let holidayNameFull = safeHoliday.replacingOccurrences(of: " ", with: "")
         viewControllerTitle.title = "\(safeHoliday)"
         
+        
         let gifRequest = GIFRequest()
-//        gifRequest { weak self result in
-//            switch result {
-//                case .failure(let error):
-//                    print (error)
-//                case .success(let holidays):
-//                    self?.listOfHolidays = holidays
-//            }
-//        }
-        
-        gifRequest.getGifs(holidayName: safeHoliday) { (result) in
-            
-            
-            player = AVPlayer(url: URL(fileReferenceLiteralResourceName: result, error))
-            self.avPlayerLayer = AVPlayerLayer(player: self.player)
-            self.avPlayerLayer.videoGravity = AVLayerVideoGravity.resize
-
-            self.gifImageView.layer.addSublayer(self.avPlayerLayer)
-            self.player.play()
-            
-            
-            print(result)
+        gifRequest.getGifs(holidayName: holidayNameFull) { (result) in
+            switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let gifImage):
+                    self.downloadImage(from: URL(string: gifImage)!)
+            }
         }
-        
-        guard let path = Bundle.main.path(forResource: "Logo-Animation4", ofType:"mp4") else {
-            debugPrint("Logo-Animation4.mp4 not found")
-            return
-        }
-        
-//        gifImageView.loadGif(name: "test.mp4")
         
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        avPlayerLayer.frame = gifImageView.layer.bounds
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() {
+                self.gifImageView.loadGif(data: data)
+            }
+        }
     }
     
     @IBAction func shareGifButton(_ sender: Any) {

@@ -16,9 +16,13 @@ enum GIFError: Error {
 struct GIFRequest {
     let API_KEY = "vN1Mf9zlf6Nle07kQYhr8alZMNm01c8A"
     
+    init () {
+        
+    }
+    
     func getGifs(holidayName: String, completion: @escaping(Result<String, GIFError>) -> Void) {
         
-        let resourceString = "https://api.giphy.com/v1/gifs/search?api_key=\(API_KEY)&q=banana&limit=1&offset=0&rating=G&lang=en"
+        let resourceString = "https://api.giphy.com/v1/gifs/search?api_key=\(API_KEY)&q=\(holidayName)&limit=1&offset=0&rating=G&lang=en"
         guard let resourceURL = URL(string: resourceString) else { fatalError() }
         
         
@@ -31,9 +35,8 @@ struct GIFRequest {
             do {
                 let decoder = JSONDecoder()
                 let gifResponse = try decoder.decode(ServerAnswer.self, from: jsonData)
-                //MARK:- GOIS
-                print(gifResponse.datas[0].images.original.mp4)
-                completion(.success(gifResponse.datas[0].images.original.mp4))
+//                print(gifResponse.datas[0].images.original.url)
+                completion(.success(gifResponse.datas[0].images.original.url))
             } catch {
                 completion(.failure(.cannotProcessData))
             }
