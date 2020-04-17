@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class GifVC: UIViewController {
     
@@ -18,30 +19,44 @@ class GifVC: UIViewController {
     
     @IBOutlet weak var gifImageView: UIImageView!
     
+    var player: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         guard let safeHoliday = holiday?.name else { return }
+        let holidayNameFull = safeHoliday.replacingOccurrences(of: " ", with: "")
         viewControllerTitle.title = "\(safeHoliday)"
         
+        
         let gifRequest = GIFRequest()
-//        gifRequest { weak self result in
-//            switch result {
-//                case .failure(let error):
-//                    print (error)
-//                case .success(let holidays):
-//                    self?.listOfHolidays = holidays
-//            }
-//        }
-        
-        gifRequest.getGifs(holidayName: safeHoliday) { (result) in
-            print(result)
+        gifRequest.getGifs(holidayName: holidayNameFull) { (result) in
+            switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let gifImage):
+                    self.downloadImage(from: URL(string: gifImage)!)
+            }
         }
-        
-//        gifImageView.loadGif(name: "test.mp4")
         
     }
     
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() {
+                self.gifImageView.loadGif(data: data)
+            }
+        }
+    }
     
     @IBAction func shareGifButton(_ sender: Any) {
         
