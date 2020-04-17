@@ -35,7 +35,6 @@ struct GIFRequest {
             do {
                 let decoder = JSONDecoder()
                 let gifResponse = try decoder.decode(ServerAnswer.self, from: jsonData)
-//                print(gifResponse.datas[0].images.original.url)
                 completion(.success(gifResponse.datas[0].images.original.url))
             } catch {
                 completion(.failure(.cannotProcessData))
