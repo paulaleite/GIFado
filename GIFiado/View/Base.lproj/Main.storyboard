@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Escolha um Feriado-->
+        <!--Choose a Holiday-->
         <scene sceneID="wG7-GB-4LH">
             <objects>
                 <tableViewController id="T5O-cZ-QIV" customClass="HolidaysTVC" customModule="GIFiado" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                             <outlet property="delegate" destination="T5O-cZ-QIV" id="vkF-rz-7px"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Escolha um Feriado" id="hhu-Xa-Q5y"/>
+                    <navigationItem key="navigationItem" title="Choose a Holiday" id="hhu-Xa-Q5y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhB-jq-2cS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

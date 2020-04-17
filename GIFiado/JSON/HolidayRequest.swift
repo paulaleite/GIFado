@@ -23,7 +23,7 @@ struct HolidayRequest {
         format.dateFormat = "yyyy"
         let currentYear = format.string(from: date)
         
-        let resoureString = "https://calendarific.com/api/v2/holidays?api_key=\(API_KEY)&country=BR&year=\(currentYear)"
+        let resoureString = "https://calendarific.com/api/v2/holidays?api_key=\(API_KEY)&country=US&year=\(currentYear)"
         guard let resourseURL = URL(string: resoureString) else { fatalError() }
         
         self.resourceURL = resourseURL
