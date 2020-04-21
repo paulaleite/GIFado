@@ -77,13 +77,13 @@
                             <outlet property="delegate" destination="T5O-cZ-QIV" id="vkF-rz-7px"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Choose a Holiday" id="hhu-Xa-Q5y"/>
+                    <navigationItem key="navigationItem" title="Choose a Holiday" largeTitleDisplayMode="always" id="hhu-Xa-Q5y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhB-jq-2cS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1428.985507246377" y="-768.08035714285711"/>
         </scene>
-        <!--Titulo-->
+        <!--GifVC-->
         <scene sceneID="kUa-s1-IMq">
             <objects>
                 <viewController id="Ln4-v7-CeW" customClass="GifVC" customModule="GIFDay" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,10 +121,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rhm-YJ-fyn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Titulo" id="ZPu-Cz-Vrm"/>
                     <connections>
                         <outlet property="gifImageView" destination="OFt-86-Mp8" id="L2I-Os-njK"/>
-                        <outlet property="viewControllerTitle" destination="ZPu-Cz-Vrm" id="v07-cx-O96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmF-Sy-JvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -29,7 +29,19 @@ class GifVC: UIViewController {
         
         guard let safeHoliday = holiday?.name else { return }
         let holidayNameFull = safeHoliday.replacingOccurrences(of: " ", with: "%20")
-        viewControllerTitle.title = "\(safeHoliday)"
+        
+        // Adjusting the size of the text dynamicaly
+        let frame = CGRect(x: 0, y: 0, width: 200, height: 40)
+        let titleLabel = UILabel(frame: frame)
+        titleLabel.text = "\(safeHoliday)"
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel.backgroundColor = UIColor.clear
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.textAlignment = .center
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .never
+        self.navigationItem.titleView = titleLabel
         
         showLoadingAlert()
         
