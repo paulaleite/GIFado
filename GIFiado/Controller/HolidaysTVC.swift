@@ -15,6 +15,7 @@ class HolidaysTVC: UITableViewController {
             // Because it's going to happen in UI
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.removeLoadingAlert()
             }
         }
     }
@@ -22,6 +23,7 @@ class HolidaysTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showLoadingAlert()
         let holidayRequest = HolidayRequest()
         holidayRequest.getHolidays { [weak self] result in
             switch result {
@@ -31,6 +33,10 @@ class HolidaysTVC: UITableViewController {
                     self?.listOfHolidays = holidays
             }
         }
+        
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 140
         
     }
 
@@ -52,11 +58,12 @@ class HolidaysTVC: UITableViewController {
         cell.holidayName.text = holiday.name
         cell.holidayDate.text = holiday.date.iso
         
+        // Changes the color of the background
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.init(displayP3Red: 0.5, green: 0.5, blue: 0.5, alpha: 0.1)
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

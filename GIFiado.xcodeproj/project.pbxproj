@@ -20,6 +20,7 @@
 		1E65AC13244784620080BBEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E65AC11244784620080BBEF /* Main.storyboard */; };
 		1E65AC15244784640080BBEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E65AC14244784640080BBEF /* Assets.xcassets */; };
 		1E65AC18244784640080BBEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E65AC16244784640080BBEF /* LaunchScreen.storyboard */; };
+		1EADB3CC244F55130042E095 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EADB3CB244F55130042E095 /* Util.swift */; };
 		1EB336D32448E0710090BB3D /* GifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB336D22448E0710090BB3D /* GifVC.swift */; };
 		1EB336D52448E95C0090BB3D /* CustomShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB336D42448E95C0090BB3D /* CustomShareButton.swift */; };
 		1EB336D72448F2AB0090BB3D /* GIFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB336D62448F2AB0090BB3D /* GIFRequest.swift */; };
@@ -60,13 +61,14 @@
 		1E4643612449FA3100872436 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		1E4643642449FA3100872436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1E4643662449FA3100872436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E65AC08244784620080BBEF /* GIFiado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFiado.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E65AC08244784620080BBEF /* GIFDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65AC0B244784620080BBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E65AC0D244784620080BBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E65AC12244784620080BBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E65AC14244784640080BBEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E65AC17244784640080BBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E65AC19244784640080BBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EADB3CB244F55130042E095 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		1EB336D22448E0710090BB3D /* GifVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifVC.swift; sourceTree = "<group>"; };
 		1EB336D42448E95C0090BB3D /* CustomShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareButton.swift; sourceTree = "<group>"; };
 		1EB336D62448F2AB0090BB3D /* GIFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFRequest.swift; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 		1E65AC09244784620080BBEF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E65AC08244784620080BBEF /* GIFiado.app */,
+				1E65AC08244784620080BBEF /* GIFDay.app */,
 				1E46435F2449FA3100872436 /* ShareExtension.appex */,
 			);
 			name = Products;
@@ -164,6 +166,7 @@
 		1E65AC0A244784620080BBEF /* GIFiado */ = {
 			isa = PBXGroup;
 			children = (
+				1EADB3CA244F54FF0042E095 /* Extensions */,
 				1E0F74602448D51700F842B9 /* JSON */,
 				1E3DAA342448C6CE00D139D5 /* Model */,
 				1E3DAA352448C6D500D139D5 /* View */,
@@ -171,6 +174,14 @@
 				1E65AC19244784640080BBEF /* Info.plist */,
 			);
 			path = GIFiado;
+			sourceTree = "<group>";
+		};
+		1EADB3CA244F54FF0042E095 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1EADB3CB244F55130042E095 /* Util.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +220,7 @@
 			);
 			name = GIFiado;
 			productName = GIFiado;
-			productReference = 1E65AC08244784620080BBEF /* GIFiado.app */;
+			productReference = 1E65AC08244784620080BBEF /* GIFDay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -290,6 +301,7 @@
 				1E0F745F2448CBB900F842B9 /* HolidayRequest.swift in Sources */,
 				1EB336D52448E95C0090BB3D /* CustomShareButton.swift in Sources */,
 				1E3DAA322448C6C200D139D5 /* HolidaysTVC.swift in Sources */,
+				1EADB3CC244F55130042E095 /* Util.swift in Sources */,
 				1EB336D72448F2AB0090BB3D /* GIFRequest.swift in Sources */,
 				1E4643592449EF4600872436 /* Swift+Gif.swift in Sources */,
 				1E0F745D2448CA3E00F842B9 /* Holiday.swift in Sources */,
@@ -500,9 +512,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ptl.GIFiado;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GIFDay;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -519,9 +531,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ptl.GIFiado;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GIFDay;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

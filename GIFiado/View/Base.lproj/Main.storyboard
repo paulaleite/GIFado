@@ -10,13 +10,13 @@
         <!--Choose a Holiday-->
         <scene sceneID="wG7-GB-4LH">
             <objects>
-                <tableViewController id="T5O-cZ-QIV" customClass="HolidaysTVC" customModule="GIFiado" sceneMemberID="viewController">
+                <tableViewController id="T5O-cZ-QIV" customClass="HolidaysTVC" customModule="GIFDay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v7l-rb-YWI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="HolidayCell" rowHeight="156" id="gXm-XA-I1t" customClass="HolidayTVCell" customModule="GIFiado" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HolidayCell" rowHeight="156" id="gXm-XA-I1t" customClass="HolidayTVCell" customModule="GIFDay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXm-XA-I1t" id="Yy5-Cj-E8G">
@@ -27,16 +27,19 @@
                                             <rect key="frame" x="20" y="14" width="374" height="128"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wf0-E2-xHu">
-                                                    <rect key="frame" x="30" y="34.5" width="299" height="59.5"/>
+                                                    <rect key="frame" x="30" y="20" width="299" height="88"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vN-e2-8Aa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="29"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vN-e2-8Aa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="57.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh7-kI-o1c">
-                                                            <rect key="frame" x="0.0" y="39" width="299" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh7-kI-o1c">
+                                                            <rect key="frame" x="0.0" y="67.5" width="299" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="5lB-FX-RCl"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -47,7 +50,9 @@
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="wf0-E2-xHu" firstAttribute="leading" secondItem="NIh-lq-CVf" secondAttribute="leading" constant="30" id="2MZ-96-edX"/>
+                                                <constraint firstItem="wf0-E2-xHu" firstAttribute="top" secondItem="NIh-lq-CVf" secondAttribute="top" constant="20" id="IIP-Rp-sJK"/>
                                                 <constraint firstItem="wf0-E2-xHu" firstAttribute="width" secondItem="NIh-lq-CVf" secondAttribute="width" multiplier="0.8" id="J0O-WZ-9tL"/>
+                                                <constraint firstAttribute="bottom" secondItem="wf0-E2-xHu" secondAttribute="bottom" constant="20" id="oPC-Tg-dKY"/>
                                                 <constraint firstItem="wf0-E2-xHu" firstAttribute="centerY" secondItem="NIh-lq-CVf" secondAttribute="centerY" id="ug1-P9-4jx"/>
                                             </constraints>
                                         </view>
@@ -72,16 +77,16 @@
                             <outlet property="delegate" destination="T5O-cZ-QIV" id="vkF-rz-7px"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Choose a Holiday" id="hhu-Xa-Q5y"/>
+                    <navigationItem key="navigationItem" title="Choose a Holiday" largeTitleDisplayMode="always" id="hhu-Xa-Q5y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhB-jq-2cS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1428.985507246377" y="-768.08035714285711"/>
         </scene>
-        <!--Titulo-->
+        <!--GifVC-->
         <scene sceneID="kUa-s1-IMq">
             <objects>
-                <viewController id="Ln4-v7-CeW" customClass="GifVC" customModule="GIFiado" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ln4-v7-CeW" customClass="GifVC" customModule="GIFDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L68-F6-fMj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,12 +94,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OFt-86-Mp8">
                                 <rect key="frame" x="20" y="269" width="374" height="358"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UO-E6-e7r" customClass="CustomShareButton" customModule="GIFiado" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UO-E6-e7r" customClass="CustomShareButton" customModule="GIFDay" customModuleProvider="target">
                                 <rect key="frame" x="176" y="757" width="62" height="63"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
                                 <color key="tintColor" red="0.41176470588235292" green="0.59215686274509804" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="28" scale="default"/>
+                                </state>
                                 <connections>
                                     <action selector="shareGifButton:" destination="Ln4-v7-CeW" eventType="touchUpInside" id="GyY-26-vQL"/>
                                 </connections>
@@ -114,10 +121,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rhm-YJ-fyn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Titulo" id="ZPu-Cz-Vrm"/>
                     <connections>
                         <outlet property="gifImageView" destination="OFt-86-Mp8" id="L2I-Os-njK"/>
-                        <outlet property="viewControllerTitle" destination="ZPu-Cz-Vrm" id="v07-cx-O96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QmF-Sy-JvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
