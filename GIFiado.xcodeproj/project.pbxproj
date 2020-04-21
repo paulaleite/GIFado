@@ -61,7 +61,7 @@
 		1E4643612449FA3100872436 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		1E4643642449FA3100872436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1E4643662449FA3100872436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E65AC08244784620080BBEF /* GIFDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E65AC08244784620080BBEF /* GifDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E65AC0B244784620080BBEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E65AC0D244784620080BBEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E65AC12244784620080BBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		1E65AC09244784620080BBEF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E65AC08244784620080BBEF /* GIFDay.app */,
+				1E65AC08244784620080BBEF /* GifDay.app */,
 				1E46435F2449FA3100872436 /* ShareExtension.appex */,
 			);
 			name = Products;
@@ -220,7 +220,7 @@
 			);
 			name = GIFiado;
 			productName = GIFiado;
-			productReference = 1E65AC08244784620080BBEF /* GIFDay.app */;
+			productReference = 1E65AC08244784620080BBEF /* GifDay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -512,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ptl.GIFiado;
-				PRODUCT_NAME = GIFDay;
+				PRODUCT_NAME = GifDay;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -531,7 +531,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ptl.GIFiado;
-				PRODUCT_NAME = GIFDay;
+				PRODUCT_NAME = GifDay;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
