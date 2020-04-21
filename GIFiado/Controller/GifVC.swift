@@ -22,6 +22,8 @@ class GifVC: UIViewController {
     var player: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     
+    var spinnerView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +31,7 @@ class GifVC: UIViewController {
         let holidayNameFull = safeHoliday.replacingOccurrences(of: " ", with: "%20")
         viewControllerTitle.title = "\(safeHoliday)"
         
+        showLoadingAlert()
         
         let gifRequest = GIFRequest()
         gifRequest.getGifs(holidayName: holidayNameFull) { (result) in
@@ -41,12 +44,15 @@ class GifVC: UIViewController {
                         
                         DispatchQueue.main.async() {
                             self.gifImageView.loadGif(data: data)
+                            self.removeLoadingAlert()
                         }
                     }
             }
         }
         
+        
     }
+
 
     @IBAction func shareGifButton(_ sender: Any) {
         
