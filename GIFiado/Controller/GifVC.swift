@@ -53,7 +53,6 @@ class GifVC: UIViewController {
         
     }
 
-
     @IBAction func shareGifButton(_ sender: Any) {
         
         
